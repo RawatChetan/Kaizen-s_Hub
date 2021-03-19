@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --black: #292829;
+  --red: #ed4d37;
+  --white: rgb(228, 213, 213);
+  background: var(--white);
+}
+
+div {
+  /* border: 1px blue solid; */
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+
+  grid-template-rows: 100vh;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 9fr 1fr;
+}
+
+.sign-in {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 6fr;
+  padding-top: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.logo > img {
+  width: 50px;
+  align-self: center;
+  justify-self: start;
+  border-radius: 25%;
+}
+
+.logo > h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  justify-self: end;
+  align-self: center;
+  color: var(--black);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px 50px 50px 50px 50px;
+}
+form > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+label {
+  justify-self: start;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.username > input {
+  border: black solid 1px;
+  border-radius: 5px;
+  color: var(--black);
+  font-weight: 300;
+  height: 4ch;
+  font-size: 1rem;
+}
+.username > input:focus {
+  background-color: rgba(255, 255, 255, 0.459);
+  border: var(--red) solid 2px;
+  outline: none;
+}
+
+.password > input {
+  border: black solid 1px;
+  border-radius: 5px;
+  color: var(--black);
+  font-weight: 300;
+  height: 4ch;
+  font-size: 1rem;
+}
+
+.password > input:focus {
+  background-color: rgba(255, 255, 255, 0.459);
+  border: var(--red) solid 2px;
+  outline: none;
+}
+
+.log-in {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.log-in > input {
+  font-weight: 600;
+  background: var(--red);
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.log-in > input:hover {
+  background: var(--black);
+  box-shadow: 0px 0px 5px var(--black);
+}
+
+.forgot {
+  justify-self: center;
+  align-self: end;
+  padding-bottom: 0px;
+}
+
+.forgot > a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.forgot > a:hover {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.alt-sign-in {
+  justify-self: center;
+  align-self: start;
+  padding-top: 0px;
+}
+
+.alt-sign-in > a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 600;
+  border-bottom: solid 2px black;
+  padding-bottom: 30px;
+  font-size: 1rem;
+}
+
+.alt-sign-in > a:hover {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.create-Account > a {
+  background: var(--red);
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.create-Account > a:hover {
+  background: var(--black);
+  box-shadow: 0px 0px 5px var(--black);
+}
+
+.footer {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "p p"
+    "terms privacy";
+}
+
+.footer > p {
+  font-size: 0.7rem;
+  font-weight: 600;
+  grid-area: p;
+  justify-self: center;
+}
+
+.footer > a {
+  text-decoration: underline;
+  color: var(--black);
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer > a:hover {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.terms {
+  grid-area: terms;
+  justify-self: end;
+  padding-right: 15%;
+  border-right: solid 1px var(--black);
+}
+
+.privacy-policy {
+  grid-area: privacy;
+  padding-left: 15%;
+  justify-self: start;
+}
+
+.privacy-policy {
+  text-decoration: underline;
+  color: var(--red);
+}
+.right {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.free-trial {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.808), #ed4c3759),
+    url(./img/backgorund_right.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-left: 20px;
+}
+
+.right > h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-top: 100px;
+}
+
+.right > .free-trial > input {
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--white);
+  background: var(--black);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.right > .free-trial > input:hover {
+  background: var(--red);
+  box-shadow: 0px 0px 5px var(--black);
+}
+
+.try-button {
+  padding-top: 68px;
+}
+
+@media only screen and (max-width: 1030px) {
+  .right > h1 {
+    font-size: 3rem;
+  }
+  .logo > h1 {
+    font-size: 1.3rem;
+  }
+}
